@@ -33,6 +33,15 @@
             --emerald-accent: #10b981;
             --emerald-glow: rgba(16, 185, 129, 0.18);
 
+            --indigo-accent: #818cf8;
+            --indigo-glow: rgba(99, 102, 241, 0.2);
+
+            --amber-accent: #f59e0b;
+            --amber-glow: rgba(245, 158, 11, 0.2);
+
+            --rose-accent: #f43f5e;
+            --rose-glow: rgba(244, 63, 94, 0.2);
+
             --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
@@ -349,6 +358,45 @@
             color: var(--emerald-accent);
         }
 
+        .card-technews {
+            --card-glow: var(--indigo-glow);
+        }
+        .card-technews:hover {
+            border-color: rgba(99, 102, 241, 0.45);
+            box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.22);
+        }
+        .card-technews .card-icon-wrapper {
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            color: var(--indigo-accent);
+        }
+
+        .card-finance {
+            --card-glow: var(--amber-glow);
+        }
+        .card-finance:hover {
+            border-color: rgba(245, 158, 11, 0.45);
+            box-shadow: 0 16px 36px -10px rgba(245, 158, 11, 0.22);
+        }
+        .card-finance .card-icon-wrapper {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            color: var(--amber-accent);
+        }
+
+        .card-tools {
+            --card-glow: var(--rose-glow);
+        }
+        .card-tools:hover {
+            border-color: rgba(244, 63, 94, 0.45);
+            box-shadow: 0 16px 36px -10px rgba(244, 63, 94, 0.22);
+        }
+        .card-tools .card-icon-wrapper {
+            background: rgba(244, 63, 94, 0.12);
+            border: 1px solid rgba(244, 63, 94, 0.25);
+            color: var(--rose-accent);
+        }
+
         /* Card Content Layout */
         .card-header {
             display: flex;
@@ -470,6 +518,21 @@
 
         .card-sso:hover .card-action svg {
             color: var(--emerald-accent);
+            transform: translateX(4px);
+        }
+
+        .card-technews:hover .card-action svg {
+            color: var(--indigo-accent);
+            transform: translateX(4px);
+        }
+
+        .card-finance:hover .card-action svg {
+            color: var(--amber-accent);
+            transform: translateX(4px);
+        }
+
+        .card-tools:hover .card-action svg {
+            color: var(--rose-accent);
             transform: translateX(4px);
         }
 
@@ -646,7 +709,7 @@
             </h1>
 
             <p class="hero-subtitle">
-                Unified portal for intelligent RAG document research, AI-powered mock technical interviews, and centralized identity management.
+                Cổng truy cập thống nhất hệ sinh thái AgentFlow: Nghiên cứu tài liệu (RAG), Luyện phỏng vấn AI, Tin tức công nghệ, Quản lý tài chính cá nhân và Tiện ích web.
             </p>
 
             <div class="feature-strip">
@@ -754,7 +817,141 @@
                 </div>
             </a>
 
-            <!-- Card 3: SSO Portal -->
+            <!-- Card 3: TechNews Portal -->
+            <a href="https://technews.agentflow.fun" class="card card-technews" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <!-- Newspaper / Article Document SVG -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                        </div>
+                        <span class="card-category-badge">Media &amp; Intelligence</span>
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-title">TechNews Portal</h2>
+                        <p class="card-description">
+                            Tin tức công nghệ, xu hướng AI Agent, FinTech và kiến trúc hệ thống hiện đại với AI tóm tắt nhanh.
+                        </p>
+                        <div class="card-tag-list">
+                            <span class="card-tag-item">AI News</span>
+                            <span class="card-tag-item">FinTech</span>
+                            <span class="card-tag-item">AI Summary</span>
+                            <span class="card-tag-item">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-status-indicator">
+                        <span class="status-dot-mini"></span>
+                        <span>Operational</span>
+                    </div>
+                    <div class="card-action">
+                        <span>Read Articles</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4: Personal Finance -->
+            <a href="https://finance.agentflow.fun" class="card card-finance" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <!-- Wallet / Wealth Intelligence SVG -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path>
+                                <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+                                <circle cx="17" cy="14" r="1"></circle>
+                            </svg>
+                        </div>
+                        <span class="card-category-badge">Financial Intel</span>
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-title">Personal Finance</h2>
+                        <p class="card-description">
+                            Quản lý tài chính cá nhân thông minh, theo dõi dòng tiền, phân tích chi tiêu và hoạch định ngân sách.
+                        </p>
+                        <div class="card-tag-list">
+                            <span class="card-tag-item">Cashflow</span>
+                            <span class="card-tag-item">Expense Tracking</span>
+                            <span class="card-tag-item">Budgeting</span>
+                            <span class="card-tag-item">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-status-indicator">
+                        <span class="status-dot-mini"></span>
+                        <span>Operational</span>
+                    </div>
+                    <div class="card-action">
+                        <span>Manage Finance</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 5: Web Tools -->
+            <a href="https://tools.agentflow.fun" class="card card-tools" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <!-- Wrench / Tools SVG -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m14.7 10.7 5.3-5.3a2 2 0 0 0-2.8-2.8L11.9 8"></path>
+                                <path d="M13.6 12.3 8.3 17.6a2 2 0 0 1-2.8-2.8l5.3-5.3"></path>
+                                <path d="m3 21 6-6"></path>
+                                <path d="m21 3-6 6"></path>
+                            </svg>
+                        </div>
+                        <span class="card-category-badge">Dev &amp; Utilities</span>
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-title">Web Tools</h2>
+                        <p class="card-description">
+                            Bộ công cụ tiện ích web thông minh: mã hóa/giải mã, định dạng JSON/YAML, đổi định dạng và tiện ích lập trình.
+                        </p>
+                        <div class="card-tag-list">
+                            <span class="card-tag-item">Dev Tools</span>
+                            <span class="card-tag-item">Formatters</span>
+                            <span class="card-tag-item">Encoders</span>
+                            <span class="card-tag-item">Productivity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-status-indicator">
+                        <span class="status-dot-mini"></span>
+                        <span>Operational</span>
+                    </div>
+                    <div class="card-action">
+                        <span>Open Tools</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 6: SSO Portal -->
             <a href="https://authorize.agentflow.fun" class="card card-sso" target="_blank" rel="noopener noreferrer">
                 <div>
                     <div class="card-header">
@@ -801,11 +998,15 @@
         <!-- Platform System Overview Strip -->
         <section class="stats-bar">
             <div class="stat-item">
+                <span class="stat-value">6 Portals</span>
+                <span class="stat-label">Active Workspaces</span>
+            </div>
+            <div class="stat-item">
                 <span class="stat-value">99.9%</span>
                 <span class="stat-label">System Uptime</span>
             </div>
             <div class="stat-item">
-                <span class="stat-value">&lt; 150ms</span>
+                <span class="stat-value">&lt; 120ms</span>
                 <span class="stat-label">Average Latency</span>
             </div>
             <div class="stat-item">
